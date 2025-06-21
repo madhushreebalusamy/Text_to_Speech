@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>texttospeech</title>
+</head>
+<body>
+    <h1>Text To Speech</h1>
+    <form action="/" method="post">
+        <label for="">Enter the text</label>
+        <input type="text" name="text">
+
+        <label for="">Choose the voice</label>
+        <select name="voice" id="voice">
+            <option value="0">0</option>
+            <option value="1"></option></select>
+
+        <label for="">rate</label>
+        <input type="range" min="1" max="200" value="100" name="rate" class="slider">
+
+        <label for="">volume</label>
+        <input type="range" name="volume" min="0" max="1" step="0.01" value="0.5" class="slider">
+
+        <button type="submit">submit</button>
+        
+    </form>
+    
+    
+</body>
+
+<style>
+    body{
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    }
+form{
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+label{
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
+
+input[type="text"], select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #6372d5;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+     box-sizing: border-box;
+}
+
+button {
+  width: 50%;
+  align-self: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #7d99e0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+}
+</style>
+</html>
